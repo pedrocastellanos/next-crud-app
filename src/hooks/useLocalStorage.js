@@ -5,11 +5,11 @@ export default function useLocalStorage(key, initialState) {
     useEffect(()=>{
         const items = JSON.parse(localStorage.getItem(key))
         if(items.length > 0) setState(items)
-    },[])
+    },[key])
 
     useEffect(() => {
       localStorage.setItem(key, JSON.stringify(state))
-    }, [state])
+    }, [state, key])
     
 
     return [state, setState]
