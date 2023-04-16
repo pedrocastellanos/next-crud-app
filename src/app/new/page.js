@@ -6,7 +6,7 @@ import { useForm } from "react-hook-form"
 import { toast } from "react-hot-toast"
 
 
-export default function page({params}) {
+export default function Page({params}) {
   
   const router = useRouter()
   const {register, handleSubmit, formState: {errors}, setValue} = useForm()
@@ -23,7 +23,7 @@ export default function page({params}) {
         setValue('description', taskFound.description)
       }
     }
-  },[])
+  },[setValue, params.id, tasks])
 
   const onSubmit = handleSubmit((data)=>{
     if(params.id){
