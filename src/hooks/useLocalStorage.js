@@ -4,7 +4,7 @@ export default function useLocalStorage(key, initialState) {
 
     useEffect(()=>{
         const items = JSON.parse(localStorage.getItem(key))
-        if(items.length > 0) setState(items)
+        if(items?.length > 0) setState(items)
     },[key])
 
     useEffect(() => {
