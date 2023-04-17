@@ -12,7 +12,7 @@ export default function NavBar() {
         <Link href="/">
             <h1 className="font-bold text-3xl text-white">
                 Task App
-                <span className="text-sm ml-5 text-slate-300">{tasks.length} tasks</span>
+                <span className="text-sm ml-5 text-slate-300">{tasks?.length} tasks</span>
             </h1>
         </Link>
         <div>
